@@ -1,32 +1,28 @@
 require('normalize.css/normalize.css');
-require('styles/App.css');
+require('styles/App.less');
+require('./Rem.js');
 
 import React from 'react';
-
-// 获取图片相关的数据
-let imageDatas = require('../data/imageDatas.json');
-
-imageDatas = (function genImageURL(imageDataArr) {
-  for (let i = 0, j = imageDataArr.length; i < j; i++) {
-    let singleImageData = imageDataArr[i];
-    singleImageData.imageURL = require('../images/' + singleImageData.fileName);
-    imageDataArr[i] = singleImageData;
-  }
-  return imageDataArr;
-})(imageDatas)
+import Header from './Header.js'
+import Contents from './Contents.js'
 
 class AppComponent extends React.Component {
+
+  // 组件加载之后计算范围
+  componentDidMount() {
+
+  }
+
   render() {
     return (
-      <section className="stage">
-        <section className="img-sec"></section>
-        <nav className="controller-nav"></nav>
-      </section>
+      <div>
+        <Header/>
+        <Contents/>
+      </div>
     );
   }
 }
 
-AppComponent.defaultProps = {
-};
+AppComponent.defaultProps = {};
 
 export default AppComponent;

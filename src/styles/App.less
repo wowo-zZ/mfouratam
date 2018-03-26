@@ -1,0 +1,119 @@
+html {
+  font-size: 32px; /* 320/10 */
+  background-color: #ecfffd;
+}
+
+body {
+  font-size: 16px; /* 修正字体大小 */
+  /* 防止页面过宽 */
+  margin: auto;
+  padding: 0;
+  width: 10rem;
+  /* 防止页面过宽 */
+  outline: 1px dashed green;
+}
+
+/* js被禁止的回退方案 */
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 32px
+  }
+
+  body {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 640px) {
+  html {
+    font-size: 48px
+  }
+
+  body {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 641px) {
+  html {
+    font-size: 64px
+  }
+
+  body {
+    font-size: 20px;
+  }
+}
+
+noscript {
+  display: block;
+  border: 1px solid #d6e9c6;
+  padding: 3px 5px;
+  background: #dff0d8;
+  color: #3c763d;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+/* stage -- start */
+.stage {
+  position: relative;
+  width: 100%;
+  height: 20rem;
+}
+
+/* stage -- end */
+
+/* img -- start */
+.img-sec {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  background-color: #ddd;
+
+  .img-figure {
+    position: absolute;
+
+    width: 10rem;
+    height: 11rem;
+    margin: 0;
+    padding: 1.5rem;
+
+    background-color: #fff;
+
+    box-sizing: border-box;
+  }
+
+  figcaption {
+    text-align: center;
+
+    .img-title {
+      margin: 20px 0 0 0;
+      color: #a7a0a2;
+      font-size: 16px;
+    }
+  }
+
+}
+
+/* img -- edn */
+
+/* controller -- start */
+.controller-nav {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  z-index: 101;
+
+  width: 100%;
+
+  text-align: center;
+}
+
+/* controller -- end */
+
+
