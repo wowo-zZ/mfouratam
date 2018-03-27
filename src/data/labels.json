@@ -1,0 +1,17 @@
+[
+  {
+    "labelName": "PHP",
+    "labelId": "2",
+    "labelPriority": 1
+  },
+  {
+    "labelName": "Linux系统",
+    "labelId": "10",
+    "labelPriority": 1
+  },
+  {
+    "labelName": "项目管理",
+    "labelId": "12",
+    "labelPriority": 1
+  }
+]
