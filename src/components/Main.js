@@ -3,8 +3,10 @@ require('styles/App.less');
 require('./Rem.js');
 
 import React from 'react';
-import Header from './Header.js'
-import Contents from './Contents.js'
+import Header from './Header.js';
+import Content from './Content.js';
+import TestRouter from './TestRouter';
+
 
 class AppComponent extends React.Component {
 
@@ -17,7 +19,8 @@ class AppComponent extends React.Component {
     return (
       <div>
         <Header/>
-        <Contents/>
+        {/*<TestRouter/>*/}
+        {/*<Content/>*/}
       </div>
     );
   }

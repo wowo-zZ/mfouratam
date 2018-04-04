@@ -1,16 +1,22 @@
 [
   {
     "labelName": "PHP",
+    "url": "/php",
+    "component": "Php",
     "labelId": "2",
     "labelPriority": 1
   },
   {
     "labelName": "Linux系统",
+    "url": "/linux",
+    "component": "Linux",
     "labelId": "10",
     "labelPriority": 1
   },
   {
     "labelName": "项目管理",
+    "url": "/project",
+    "component": "Project",
     "labelId": "12",
     "labelPriority": 1
   }
