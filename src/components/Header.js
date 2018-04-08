@@ -28,12 +28,12 @@ class Header extends React.Component {
     }
 
     let LabelItems = () => (
-        <Router>
-          <div>
-            <Link to="/php">PHP</Link>
-            <Route path="/php" component={PHP}/>
-          </div>
-        </Router>
+      <Router>
+        <div>
+          <Link to="/php">PHP</Link>
+          <Route path="/php" component={PHP}/>
+        </div>
+      </Router>
     );
 
     let logoSrc = require('../images/syhs.png');

@@ -6,7 +6,6 @@ import React from 'react';
 import Header from './Header.js';
 import Content from './Content.js';
 import Article from './Article.js';
-import TestRouter from './TestRouter';
 import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
 
 const AppComponent = () => (
@@ -15,7 +14,7 @@ const AppComponent = () => (
       <Header/>
       <Switch>
         <Route path="/index" exact component={Content}/>
-        <Route path="/article" component={Article}/>
+        <Route path="/article/:id" component={Article}/>
         <Redirect to="/index"/>
       </Switch>
     </div>
