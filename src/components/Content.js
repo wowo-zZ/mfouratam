@@ -8,14 +8,22 @@ class Content extends React.Component {
     super(props);
 
     this.state = {
-      'pages': require('../data/pages.json')
+      'pages': []
     };
+  }
+
+  componentWillMount() {
+    const pages = require('../data/pages.json');
+    pages.map((page) => page.href = 'article/' + page.id);
+    this.setState({
+      'pages': pages
+    });
   }
 
   render() {
     let pageItems = this.state.pages.map((page) =>
       <div className="page">
-        <a href={page.url}><p>{page.title}</p></a>
+        <a href={page.href}><p>{page.title}</p></a>
         <span>{page.desc}</span>
       </div>
     );
