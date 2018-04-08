@@ -5,26 +5,22 @@ require('./Rem.js');
 import React from 'react';
 import Header from './Header.js';
 import Content from './Content.js';
+import Article from './Article.js';
 import TestRouter from './TestRouter';
+import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
 
-
-class AppComponent extends React.Component {
-
-  // 组件加载之后计算范围
-  componentDidMount() {
-
-  }
-
-  render() {
-    return (
-      <div>
-        <Header/>
-        {/*<TestRouter/>*/}
-        {/*<Content/>*/}
-      </div>
-    );
-  }
-}
+const AppComponent = () => (
+  <BrowserRouter>
+    <div>
+      <Header/>
+      <Switch>
+        <Route path="/index" exact component={Content}/>
+        <Route path="/article" component={Article}/>
+        <Redirect to="/index"/>
+      </Switch>
+    </div>
+  </BrowserRouter>
+);
 
 AppComponent.defaultProps = {};
 
